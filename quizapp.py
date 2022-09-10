@@ -4,6 +4,7 @@ import random
 score = 0
 questions_asked = 0
 
+
 def ask_questions():
     global score, questions_asked
     for questions, answers in QUESTIONS.items():
@@ -23,4 +24,6 @@ def ask_questions():
             print(f"Wrong answer! The correct answer is '{correct_answer}' and not '{answer}'!\n")
 
 ask_questions()
+quote = score / questions_asked * 100
 print(f"You aswered {score} out of {questions_asked} correct!")
+print(f"You answered {quote}% of the questions correctly!")
